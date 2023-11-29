@@ -3,10 +3,13 @@ using namespace std;
 
 void bubbleSort(vector <int> &v, int n){
     for(int i = 0; i < n - 1; i++){
+        bool isSwapped = false;
         for(int j = 0; j < n - i - 1; j++){
+            isSwapped = true;
             if(v[j + 1] > v[j])
                 swap(v[j + 1], v[j]);
         }
+        if(!isSwapped) break;
     }
 }
 
